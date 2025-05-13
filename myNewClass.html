@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        .firstHeading {
-            color:green; font-size:31px
+
+        .mypic{
+            box-shadow:0px 0px 20px blue; padding:50px; border:1px solid blue;
+            transition: background-color 5s; /* Smooth change in 0.5 seconds */
         }
-        .firstpara{
-            font-size: 20px;
+        .firstpara:hover{
+            color:white
+        }
+        .mypic:hover{
+            background-color: aquamarine;
+            border-radius: 50px;
+            
+        }
+        .myPicParagraph{
+            display:none;
+            
+        }
+
+        .mypic:hover + .myPicParagraph{
+            display:block;
             color:blue;
-            font-family: Arial, sans-serif;
-        }
-
-
-        #secondDiv{
-            border-radius:100px 0px 100px 0px; 
-            border:1px solid #000; 
-            height:100px; 
-            width:100px;
-
+            font-size:30px;
+            text-shadow:10px 10px 0px purple;
         }
     </style>
+
+
 </head>
 <body style="background: green;
 background: linear-gradient(30deg,green 0%, limegreen 35%, rgba(0, 212, 255, 1) 100%);">
@@ -35,13 +46,14 @@ background: linear-gradient(30deg,green 0%, limegreen 35%, rgba(0, 212, 255, 1) 
 -->
 
 
-  <div id="secondDiv">
-This is my second div
-        </div>
+  <div id="secondDiv">This is my second div</div>
 
 
 
     <h1 class="firstpara"> This is my heading tag</h1>
+
+
+
     <h1 id="secondHeading"> This is my Second heading tag</h1>
     <h1 id="thirdHeading"> This is my Third heading tag</h1>
 
@@ -49,7 +61,8 @@ This is my second div
         <p style="font-size:51px; text-shadow:10px 10px 0px purple"> My Second Paragraph</p>
         <p> My Third Paragraph</p>
 
-        <img style="box-shadow:0px 0px 20px blue; padding:50px; border:1px solid blue" src="newpic.png"/>
+        <img class="mypic" src="newpic.png"/>
+        <p class="myPicParagraph"> This is my picture to test hover</p>
 
         <div style="margin-top:200px;  padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px; width:150px; border:1px solid black;">
             This is my first div
